@@ -21,6 +21,15 @@ const MyForm = () => {
     e.preventDefault()
     // You can perform actions with the form data here
     console.log("Form submitted:", formData)
+
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: login,
+      customEventData: {
+        userName: name,
+        userEmail: value,
+      },
+    })
   }
 
   return (
