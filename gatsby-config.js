@@ -23,6 +23,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: "GTM-M3X4XLQR", // Replace with your GTM container ID
+        includeInDevelopment: false, // Set to true if you want to include GTM in development
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
