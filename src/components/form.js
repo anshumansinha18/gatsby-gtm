@@ -24,7 +24,7 @@ const MyForm = () => {
 
     window.dataLayer = window.dataLayer || []
     window.dataLayer.push({
-      event: login,
+      event: "login",
       customEventData: {
         userName: name,
         userEmail: value,
