@@ -32,6 +32,14 @@ const MyForm = () => {
     })
   }
 
+  const handleFocus = () => {
+    window.dataLayer = window.dataLayer || []
+
+    window.dataLayer.push({
+      event: "inputFocus",
+    })
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -42,6 +50,7 @@ const MyForm = () => {
           name="name"
           value={formData.name}
           onChange={handleInputChange}
+          onFocus={handleFocus}
         />
       </div>
       <div>
