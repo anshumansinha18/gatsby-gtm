@@ -38,6 +38,13 @@ const MyForm = () => {
     window.dataLayer.push({
       event: "inputFocus",
     })
+
+    window.dataLayer.push({
+      event: "random",
+      customEventData: {
+        data: "random data",
+      },
+    })
   }
 
   return (
